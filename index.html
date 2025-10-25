@@ -26,6 +26,14 @@
         
         <!-- ACE.js -->
         <script src="lib/ace/ace.js"></script>
+        <script>
+            // Configure ACE basePath so ace.require can find extensions
+            if (typeof ace !== 'undefined' && ace.config) {
+                ace.config.set('basePath', 'lib/ace');
+            }
+        </script>
+        <!-- ACE language tools (autocompletion) -->
+        <script src="lib/ace/ext-language_tools.js"></script>
         
         <!-- marked -->
         <script src="lib/marked.min.js"></script>
@@ -34,6 +42,7 @@
         <link rel="stylesheet" href="lib/highlight/styles/default.css">
         <script src="lib/highlight/highlight.pack.js"></script>
         <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+        <link rel="stylesheet" href="lib/interface-autocomplete.css">
     </head>
     <body>
         <header>
