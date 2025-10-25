@@ -1,0 +1,19 @@
+/* Styles pour le menu d'autocomplétion ACE */
+.ace_autocomplete {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: linear-gradient(#fff, #fafafa);
+  color: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ace_autocomplete .ace_completion-highlight { background: rgba(255, 235, 59, 0.25); }
+.ace_autocomplete .ace_meta { color: #6c757d; font-size: 11px; }
+.ace_autocomplete .ace_completion, .ace_autocomplete .ace_completion-selected {
+  padding: 6px 10px;
+}
+.ace_autocomplete .ace_completion-selected { background: linear-gradient(#1e90ff, #1c86ee); color: white; }
+.ace_autocomplete .ace_completion .ace_completion-caption { font-weight: 500; }
+.ace_autocomplete .ace_completion .ace_completion-meta { float: right; color: rgba(255,255,255,0.8); font-size: 11px; }
