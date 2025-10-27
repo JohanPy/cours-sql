@@ -184,3 +184,137 @@ button.item {
     top: 0;
     background-color: white;
 }
+
+/* Spoilers / Indices */
+.spoiler-container {
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.spoiler-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    min-width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.spoiler-button:hover {
+    background-color: #ec971f;
+    cursor: pointer;
+}
+
+.spoiler-button.open {
+    background-color: #5cb85c;
+}
+
+.spoiler-button.open:hover {
+    background-color: #449d44;
+}
+
+.spoiler-content {
+    display: none;
+    padding: 15px;
+    background-color: #fafafa;
+    border-top: 2px solid #ddd;
+    line-height: 1.6;
+}
+
+.spoiler-content.visible {
+    display: block;
+}
+
+.spoiler-content p {
+    margin: 8px 0;
+}
+
+.spoiler-content code {
+    background-color: #e8f4f8;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.spoiler-content strong {
+    color: #d9534f;
+}
+
+/* Éléments <details> native HTML pour les spoilers */
+details {
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 0;
+    overflow: hidden;
+}
+
+details summary {
+    padding: 12px 15px;
+    background-color: #f0ad4e;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+details summary:hover {
+    background-color: #ec971f;
+}
+
+details[open] > summary {
+    background-color: #5cb85c;
+}
+
+details[open] > summary:hover {
+    background-color: #449d44;
+}
+
+details > *:not(summary) {
+    padding: 15px;
+    background-color: #fafafa;
+    border-top: 2px solid #ddd;
+    line-height: 1.6;
+}
+
+details > p {
+    margin: 0;
+    padding: 15px;
+}
+
+details > p code {
+    background-color: #e8f4f8;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+details pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+details code {
+    background-color: transparent;
+    padding: 0;
+    font-family: monospace;
+}
+
