@@ -1,9 +1,12 @@
 <!doctype html>
-<html>
+<html lang="fr">
     <head>
-        <title>SQL : cours et exercices</title>
         <meta charset="utf-8">
-        <!-- favicon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SQL : Cours et Exercices Interactifs</title>
+        <meta name="description" content="Plateforme interactive d'apprentissage SQL avec cours, exercices et éditeur live.">
+        
+        <!-- Favicon -->
         <link rel="icon" type="image/ico" href="images/favicon-database.ico" />
         
         <!-- jQuery -->
@@ -13,7 +16,7 @@
         <link rel="stylesheet" href="lib/jquery.dataTables.min.css">
         <script src="lib/jquery.dataTables.min.js"></script>
         
-        <!-- extensions pour avoir les boutons d'export des données -->
+        <!-- Extensions pour les boutons d'export -->
         <script src="lib/dataTables.buttons.min.js"></script>
         <link rel="stylesheet" href="lib/buttons.dataTables.min.css">
         <script src="lib/buttons.html5.min.js"></script>
@@ -24,47 +27,57 @@
         <script src="lib/sql.js"></script>
         <link rel="stylesheet" href="lib/interface.css">
         
-        <!-- ACE.js -->
+        <!-- ACE.js editor -->
         <script src="lib/ace/ace.js"></script>
         <script>
-            // Configure ACE basePath so ace.require can find extensions
             if (typeof ace !== 'undefined' && ace.config) {
                 ace.config.set('basePath', 'lib/ace');
             }
         </script>
-        <!-- ACE language tools (autocompletion) -->
         <script src="lib/ace/ext-language_tools.js"></script>
         
-        <!-- marked -->
+        <!-- Markdown parser -->
         <script src="lib/marked.min.js"></script>
         
-        <!-- highlights -->
+        <!-- Code highlighting -->
         <link rel="stylesheet" href="lib/highlight/styles/default.css">
         <script src="lib/highlight/highlight.pack.js"></script>
-        <!-- <script>hljs.initHighlightingOnLoad();</script> -->
         <link rel="stylesheet" href="lib/interface-autocomplete.css">
     </head>
     <body>
         <header>
-            <h1>SQL</h1>
-            &nbsp;&nbsp;
-            <h2>Cours et exercices</h2>
-            <div id = "titre"></div>
-            <div id = "bdd"></div>
-            <div id = "boutons">
-                <button id = "accueil">Accueil</button>
-                <button id = "historique">Historique</button>
-                <button id = "lancer">Exécution</button>
-                <button id = "tables">Tables</button>
-                <button id = "schema">Schéma</button>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h1>SQL</h1>
+                <span style="font-size: 1.5em; color: var(--text-secondary);">|</span>
+                <h2>Cours et Exercices Interactifs</h2>
+            </div>
+            <div id="boutons">
+                <button id="accueil" title="Retourner à l'accueil">🏠 Accueil</button>
+                <button id="historique" title="Voir l'historique">📋 Historique</button>
+                <button id="lancer" title="Exécuter la requête">▶ Exécution</button>
+                <button id="tables" title="Voir les tables">⊞ Tables</button>
+                <button id="schema" title="Voir le schéma">📊 Schéma</button>
             </div>
         </header>
-        <section id = "interface">
+        
+        <section id="info-header" style="display: none; padding: 12px 50px; background: rgba(52, 152, 219, 0.05); border-bottom: 1px solid #ecf0f1;">
+            <div id="titre"></div>
+            <div id="bdd"></div>
         </section>
+        
+        <section id="interface"></section>
+        
         <footer>
-            <p>Interface de cours SQL pour l'entrainement au requêtage - Code disponible <a href="https://github.com/JohanPy/cours-sql" target="_blank">ici</a> - Actualisé par Johan Pelay d'aprés un code de <a href="https://github.com/fxjollois/cours-sql" target="_blank">FX Jollois</a></p>
-            <p>Développé avec la librairie <a href="https://github.com/sql-js/sql.js" target="_blank">sql.js v1.13</a>, basée sur <a href="https://www.sqlite.org/" target="_blank">SQLite</a>. Taper <code>CTRL + ENTER</code> pour exécuter. </p>
+            <p>
+                Plateforme d'entraînement au requêtage SQL 
+                | Code disponible sur <a href="https://github.com/JohanPy/cours-sql" target="_blank">GitHub</a>
+                | Développé avec <a href="https://github.com/sql-js/sql.js" target="_blank">sql.js v1.13</a> et <a href="https://www.sqlite.org/" target="_blank">SQLite</a>
+            </p>
+            <p>
+                💡 Astuce : Appuyez sur <code>CTRL + ENTER</code> pour exécuter votre requête
+            </p>
         </footer>
+        
         <script src="lib/interface.js"></script>
     </body>
 </html>
